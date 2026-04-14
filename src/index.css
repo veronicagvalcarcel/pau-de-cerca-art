@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Coming+Soon&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Patrick Hand SC", cursive;
+  --font-body: "Coming Soon", cursive;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  --color-mustard: #E4C775;
+  --color-lila: #B59EC8;
+  --color-black-art: #303231;
+  --color-white-art: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-mustard text-black-art font-body;
+  }
+  h1, h2, h3, h4 {
+    @apply font-headline;
+  }
+}
