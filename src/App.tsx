@@ -11,9 +11,16 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [view, setView] = useState<'showcase' | 'detail'>('showcase');
 
-  const filteredProducts = activeCategory === 'Todes' 
-    ? PRODUCTS 
-    : PRODUCTS.filter(p => p.category === activeCategory);
+  const shuffleArray = (array: Product[]) => {
+  return [...array].sort(() => Math.random() - 0.5);
+};
+
+  const filteredProducts =
+  activeCategory === 'Todes'
+    ? shuffleArray(PRODUCTS)
+    : PRODUCTS.filter(
+        p => p.category.toLowerCase() === activeCategory.toLowerCase()
+      );
 
   const handleProductClick = (product: Product) => {
     setSelectedProduct(product);
