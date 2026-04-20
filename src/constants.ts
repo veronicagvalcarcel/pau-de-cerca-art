@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
 }));
 
 // 📂 Categorías
-export const CATEGORIES = ['Todes', 'prints', 'camisetas', 'totebags'];
+export const CATEGORIES = ['Todes', 'Prints', 'Camisetas', 'Totebags'];
 
 // 🧠 Logo
 export const LOGO_URL =
