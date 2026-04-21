@@ -6,7 +6,7 @@ import { ShowcasePage } from './pages/ShowcasePage';
 import { ProductDetail } from './components/ProductDetail';
 
 export default function App() {
-  const [activeCategory, setActiveCategory] = useState('Todes');
+  const [activeCategory, setActiveCategory] = useState('Camisetas');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [view, setView] = useState<'showcase' | 'detail'>('showcase');

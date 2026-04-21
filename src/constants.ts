@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
 }));
 
 // 📂 Categorías
-export const CATEGORIES = ['Todes', 'Prints', 'Camisetas', 'Totebags'];
+export const CATEGORIES = ['Camisetas', 'Prints', 'Totebags', 'Todes',];
 
 // 🧠 Logo
 export const LOGO_URL = "/logos/logo.webp";
