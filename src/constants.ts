@@ -61,5 +61,4 @@ export const PRODUCTS: Product[] = [
 export const CATEGORIES = ['Todes', 'Prints', 'Camisetas', 'Totebags'];
 
 // 🧠 Logo
-export const LOGO_URL =
-  "https://storage.googleapis.com/static.antigravity.dev/paudecercaart/logo.png";
+export const LOGO_URL = "/logos/logo.webp";
