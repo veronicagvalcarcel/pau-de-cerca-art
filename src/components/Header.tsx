@@ -44,9 +44,17 @@ export const Header = ({ activeCategory, setActiveCategory, isMenuOpen, setIsMen
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="hidden md:block bg-black-art text-white-art px-6 py-2.5 rounded-lg font-label font-semibold text-sm hover:bg-black-art/90 transition-all active:scale-95">
-            Contacto
-          </button>
+         <a
+          href="https://www.instagram.com/paudecercaart/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:block bg-black-art text-white-art px-6 py-2.5 rounded-lg font-label font-semibold text-sm 
+          hover:bg-black-art/90 transition-all active:scale-95 "
+        >
+          Contacto
+        </a>
+ 
+          
           <button 
             className="md:hidden p-2 text-black-art"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
