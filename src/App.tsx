@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
-import { Product } from './types';
+import { Product,} from './types';
 import { PRODUCTS } from './constants';
 import { ShowcasePage } from './pages/ShowcasePage';
 import { ProductDetail } from './components/ProductDetail';
