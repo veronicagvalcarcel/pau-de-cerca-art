@@ -87,9 +87,15 @@ export const Header = ({ activeCategory, setActiveCategory, isMenuOpen, setIsMen
                 {cat}
               </button>
             ))}
-            <button className="bg-black-art text-white-art px-6 py-3 rounded-lg font-label font-semibold text-center mt-4">
-              Contacto
-            </button>
+            <a
+            href="https://www.instagram.com/paudecercaart/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+            className="bg-black-art text-white-art px-6 py-3 rounded-lg font-label font-semibold text-center mt-4 block"
+          >
+            Contacto
+          </a>
           </motion.div>
         )}
       </AnimatePresence>

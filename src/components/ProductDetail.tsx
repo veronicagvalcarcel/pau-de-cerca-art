@@ -158,23 +158,25 @@ export const ProductDetail = ({ product, onBack, onNavigate }: ProductDetailProp
       </main>
 
       {/* Bottom Nav (Mobile) */}
-      <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-sm bg-white-art/90 backdrop-blur-md rounded-full px-8 py-4 flex justify-between items-center shadow-2xl border border-black-art/5 md:hidden">
-        <button 
-          onClick={onBack}
-          className="flex flex-col items-center gap-1 text-black-art/40 hover:text-black-art transition-colors"
-        >
-          <LayoutGrid size={24} />
-          <span className="text-[10px] font-bold uppercase tracking-tighter">Todes</span>
-        </button>
-        <button className="flex flex-col items-center gap-1 text-black-art">
-          <ShoppingBag size={24} />
-          <span className="text-[10px] font-bold uppercase tracking-tighter">Tienda</span>
-        </button>
-        <button className="flex flex-col items-center gap-1 text-black-art/40 hover:text-black-art transition-colors">
-          <Mail size={24} />
-          <span className="text-[10px] font-bold uppercase tracking-tighter">Contacto</span>
-        </button>
-      </nav>
+      <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-sm bg-white-art/90 backdrop-blur-md rounded-full px-10 py-4 flex justify-around items-center shadow-2xl border border-black-art/5 md:hidden">
+      <button 
+        onClick={onBack}
+        className="flex flex-col items-center gap-1 text-black-art/40 hover:text-black-art transition-colors"
+      >
+        <LayoutGrid size={24} />
+        <span className="text-[10px] font-bold uppercase tracking-tighter">Escaparate</span>
+      </button>
+
+      <a
+        href="https://www.instagram.com/paudecercaart/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex flex-col items-center gap-1 text-black-art/40 hover:text-black-art transition-colors"
+      >
+        <Mail size={24} />
+        <span className="text-[10px] font-bold uppercase tracking-tighter">Contacto</span>
+      </a>
+    </nav>
     </motion.div>
   );
 };
