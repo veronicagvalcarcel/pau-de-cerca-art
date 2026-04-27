@@ -73,27 +73,29 @@ export const ProductDetail = ({ product, onBack, onNavigate }: ProductDetailProp
           {/* Navigation Arrows */}
           <button 
             onClick={() => onNavigate('prev')}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white-art/80 backdrop-blur-md rounded-full shadow-lg text-black-art opacity-0 group-hover:opacity-100 transition-opacity"
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white-art/80 backdrop-blur-md rounded-full shadow-lg text-black-art transition-all hover:scale-110 hover:shadow-xl"
           >
             <ChevronLeft size={24} />
           </button>
           <button 
             onClick={() => onNavigate('next')}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white-art/80 backdrop-blur-md rounded-full shadow-lg text-black-art opacity-0 group-hover:opacity-100 transition-opacity"
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white-art/80 backdrop-blur-md rounded-full shadow-lg text-black-art transition-all hover:scale-110 hover:shadow-xl"
           >
             <ChevronRight size={24} />
           </button>
 
           {/* Carousel Indicators */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-            {PRODUCTS.map((p) => (
-              <div 
-                key={p.id}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  product.id === p.id ? 'w-8 bg-black-art' : 'w-1.5 bg-black-art/20'
-                }`}
-              />
-            ))}
+          <div className="absolute bottom-4 left-0 right-0 px-4 flex justify-center">
+            <div className="flex gap-2 max-w-full flex-wrap justify-center">
+              {PRODUCTS.map((p) => (
+                <div 
+                  key={p.id}
+                  className={`h-1.5 rounded-full transition-all duration-300 flex-shrink-0 ${
+                    product.id === p.id ? 'w-8 bg-black-art' : 'w-1.5 bg-black-art/20'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </section>
 

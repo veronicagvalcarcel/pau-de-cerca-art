@@ -16,7 +16,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index, onClic
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
-      className={`group cursor-pointer ${index % 2 === 1 ? 'md:mt-16' : ''}`}
+      className={`group cursor-pointer ${index % 2 === 1 ? 'lg:mt-16' : ''}`}
       onClick={() => onClick(product)}
     >
       <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-white-art/30 shadow-2xl shadow-black-art/5 mb-8 relative">
