@@ -6,6 +6,7 @@ import { InstagramFeed } from '../components/InstagramFeed';
 import { Footer } from '../components/Footer';
 import { Product } from '../types';
 import { CATEGORIES, LOGO_URL } from '../constants';
+import { About } from '../components/About';
 
 interface ShowcasePageProps {
   activeCategory: string;
@@ -63,7 +64,8 @@ export const ShowcasePage = ({
             Bienvenide, encuentra tu próxima pieza favorita.
           </motion.p>
         </section>
-
+        <About />
+        
         {/* Filter Bar */}
         <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20">
           <div className="flex flex-wrap justify-center gap-3">
@@ -101,7 +103,6 @@ export const ShowcasePage = ({
             </AnimatePresence>
           </motion.div>
         </section>
-
         <InstagramFeed />
         <Footer />
       </main>
