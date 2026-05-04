@@ -17,9 +17,109 @@ interface ProductDetailProps {
   product: Product;
   onBack: () => void;
   onNavigate: (direction: 'prev' | 'next') => void;
+  onImageClick?: () => void;
 }
 
-export const ProductDetail = ({ product, onBack, onNavigate }: ProductDetailProps) => {
+const getRelatedProductId = (productId: number): number | null => {
+  const links: Record<number, number> = {
+    2: 9,  // c2 blanca -> c9 negra
+    9: 2,  // c9 negra -> c2 blanca
+    5: 4,  // c5 delantera -> c4 trasera
+    4: 5,  // c4 trasera -> c5 delantera
+  };
+  return links[productId] || null;
+};
+
+const renderDescriptionWithLink = (description: string, productId: number) => {
+  const relatedId = getRelatedProductId(productId);
+  if (!relatedId) return description;
+
+  const getProductUrl = (id: number) => {
+    return `${window.location.pathname}?product=${id}`;
+  };
+
+  // Handle "Clica aquí o en la imagen"
+  if (description.includes('Clica aquí o en la imagen')) {
+    const parts = description.split('Clica aquí o en la imagen');
+    return (
+      <>
+        {parts[0]}
+        <a
+          href={getProductUrl(relatedId)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-lila hover:text-lila/80 underline transition-colors"
+        >
+          Clica aquí
+        </a>
+        {' o en la '}
+        <a
+          href={getProductUrl(relatedId)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-lila hover:text-lila/80 underline transition-colors"
+        >
+          imagen
+        </a>
+        {parts[1]}
+      </>
+    );
+  }
+
+  // Handle "Clica en la imagen" alone
+  if (description.includes('Clica en la imagen')) {
+    const parts = description.split('Clica en la imagen');
+    return (
+      <>
+        {parts[0]}
+        <a
+          href={getProductUrl(relatedId)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-lila hover:text-lila/80 underline transition-colors"
+        >
+          Clica en la imagen
+        </a>
+        {parts[1]}
+      </>
+    );
+  }
+
+  // Handle "Clica aquí" alone
+  if (description.includes('Clica aquí')) {
+    const parts = description.split('Clica aquí');
+    return (
+      <>
+        {parts[0]}
+        <a
+          href={getProductUrl(relatedId)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-lila hover:text-lila/80 underline transition-colors"
+        >
+          Clica aquí
+        </a>
+        {parts[1]}
+      </>
+    );
+  }
+
+  return description;
+};
+
+export const ProductDetail = ({ product, onBack, onNavigate, onImageClick }: ProductDetailProps) => {
+  const relatedId = getRelatedProductId(product.id);
+
+  const handleImageClickWithNewTab = () => {
+    if (relatedId) {
+      const getProductUrl = (id: number) => {
+        return `${window.location.pathname}?product=${id}`;
+      };
+      window.open(getProductUrl(relatedId), '_blank');
+    } else if (onImageClick) {
+      onImageClick();
+    }
+  };
   return (
     <motion.div
       key="detail"
@@ -54,7 +154,12 @@ export const ProductDetail = ({ product, onBack, onNavigate }: ProductDetailProp
       <main className="pt-24 pb-32 max-w-2xl mx-auto px-6 w-full">
         {/* Product Gallery / Image */}
         <section className="relative mb-10 group">
-          <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl bg-white-art shadow-2xl shadow-black-art/5">
+          <div 
+            onClick={handleImageClickWithNewTab}
+            className={`aspect-[4/5] w-full overflow-hidden rounded-2xl bg-white-art shadow-2xl shadow-black-art/5 ${
+              [2, 9, 5, 4].includes(product.id) ? 'cursor-pointer hover:opacity-90 transition-opacity' : ''
+            }`}
+          >
             <AnimatePresence mode="wait">
               <motion.img
                 key={product.id}
@@ -109,7 +214,7 @@ export const ProductDetail = ({ product, onBack, onNavigate }: ProductDetailProp
             {product.collection}
           </p>
           <p className="text-lg md:text-xl leading-relaxed opacity-80 mb-10">
-            {product.description}
+            {renderDescriptionWithLink(product.description, product.id)}
           </p>
 
           {/* Contact Button */}
@@ -131,7 +236,9 @@ export const ProductDetail = ({ product, onBack, onNavigate }: ProductDetailProp
             </div>
             <div className="bg-white-art/50 p-6 rounded-2xl border border-black-art/5">
               <h3 className="text-sm font-label font-bold text-black-art/40 uppercase tracking-widest mb-2">Medidas</h3>
-              <p className="text-lg text-black-art">{product.measures}</p>
+              <p className="text-lg text-black-art whitespace-pre-line">
+               {product.measures}
+                </p>
             </div>
           </div>
 
@@ -144,16 +251,6 @@ export const ProductDetail = ({ product, onBack, onNavigate }: ProductDetailProp
               <p className="text-black-art/70">Producido de forma ética con materiales orgánicos.</p>
             </div>
           </div>
-        </section>
-
-        {/* Footer Quote */}
-        <section className="text-center pt-20 border-t border-black-art/5">
-          <div className="flex justify-center mb-6 text-mustard">
-            <Sparkles size={32} />
-          </div>
-          <p className="italic text-black-art/60 max-w-xs mx-auto leading-relaxed">
-            "Cada trazo cuenta una historia, cada bolso es un lienzo que te acompaña."
-          </p>
         </section>
       </main>
 

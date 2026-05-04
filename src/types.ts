@@ -3,9 +3,18 @@ export interface Product {
   name: string;
   category: string;
   collection: string;
+
   image: string;
+  backImage?: string;
+
   price: string;
   description: string;
-  material: string;
-  measures: string;
+
+  material?: string;
+  measures?: string;
+
+  variants?: {
+    color?: string;
+    images?: string[];
+  };
 }
