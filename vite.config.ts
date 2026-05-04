@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tailwindcss()],
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+
     },
     resolve: {
       alias: {
@@ -17,10 +17,13 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      hmr: process.env.DISABLE_HMR !== 'true',
-
-    
-      allowedHosts: true,
+      // SECURITY: Restrict HMR and allowed hosts to prevent DNS rebinding attacks
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost',
+        port: 5173,
+      },
+      allowedHosts: ['localhost', '127.0.0.1'],
     },
   };
 });
