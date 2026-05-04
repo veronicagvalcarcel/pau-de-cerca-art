@@ -23,7 +23,7 @@ export default defineConfig(({ mode }) => {
         host: 'localhost',
         port: 5173,
       },
-      allowedHosts: ['localhost', '127.0.0.1'],
+      // allowedHosts: ['localhost', '127.0.0.1', 'trycloudflare.com'],
     },
   };
 });
