@@ -11,7 +11,7 @@ export const Footer = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-6xl italic mb-12"
         >
-          "El arte de lo cercano y lo cotidiano."
+          © 2024 ·Pau de cerca ·art·
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0 }}
@@ -20,14 +20,14 @@ export const Footer = () => {
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl leading-relaxed opacity-80 mb-16"
         >
-          Cada pieza es una exploración de la sencillez. Pau de cerca nace de la necesidad de llevar el arte fuera de los marcos y volcarlo en objetos que habitan nuestro día a día. Ilustraciones hechas a mano, producidas con mimo y consciencia.
+           TODOS LOS DERECHOS RESERVADOS.
         </motion.p>
         
         <div className="flex justify-center gap-12 mb-16">
           <motion.div whileHover={{ scale: 1.2 }} className="text-black-art">
             <Brush size={32} />
           </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} className="text-lila">
+          <motion.div whileHover={{ scale: 1.2 }} className="text-black-art">
             <Leaf size={32} />
           </motion.div>
           <motion.div whileHover={{ scale: 1.2 }} className="text-black-art">
@@ -45,9 +45,7 @@ export const Footer = () => {
             <Instagram size={20} />
             @paudecercaart
           </a>
-          <p className="text-xs font-label text-black-art/30 tracking-widest uppercase">
-            © 2024 PAU DE CERCA ART. TODOS LOS DERECHOS RESERVADOS.
-          </p>
+        
         </div>
       </div>
     </section>
