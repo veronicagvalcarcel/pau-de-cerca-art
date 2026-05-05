@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   ArrowLeft, 
-  ShoppingBag, 
   ChevronLeft, 
   ChevronRight, 
   Megaphone, 
@@ -146,9 +145,6 @@ export const ProductDetail = ({ product, onBack, onNavigate, onImageClick }: Pro
             />
           </div>
         </div>
-        <button className="p-2 text-black-art/60 hover:text-black-art transition-colors">
-          <ShoppingBag size={24} />
-        </button>
       </header>
 
       <main className="pt-24 pb-32 max-w-2xl mx-auto px-6 w-full">
@@ -208,7 +204,6 @@ export const ProductDetail = ({ product, onBack, onNavigate, onImageClick }: Pro
         <section className="mb-12">
           <div className="flex justify-between items-baseline mb-2">
             <h2 className="text-4xl md:text-5xl text-black-art">{product.name}</h2>
-            <span className="text-2xl font-bold text-black-art">{product.price}</span>
           </div>
           <p className="text-lila font-label font-semibold tracking-wider mb-8">
             {product.collection}

@@ -7,7 +7,6 @@ export interface Product {
   image: string;
   backImage?: string;
 
-  price: string;
   description: string;
 
   material?: string;

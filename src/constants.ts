@@ -4,7 +4,6 @@ import { Product } from './types';
 const CAMISETA_BASE = {
   category: 'camisetas',
   material: '100% algodón',
-  price: '30€',
   measures: `S 48x69
 M 50x71
 L 54x73
@@ -20,16 +19,14 @@ Hombro a cintura = largo.`,
 
 const PRINT_BASE = {
   category: 'prints',
-  material: 'Papel premium',
-  price: '20€',
-  measures: 'A4 / A3',
+  material: 'Impresión a color en cartulina blanca',
+  measures: 'A5 y A4',
 };
 
 const TOTE_BASE = {
   category: 'totebags',
-  material: 'Algodón',
-  price: '25€',
-  measures: '38x42cm',
+  material: 'algodón',
+  measures: '38x42 cm',
 };
 
 // 🧩 FACTORIES
