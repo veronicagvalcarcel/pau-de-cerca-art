@@ -6,8 +6,8 @@ export const InstagramFeed = () => {
     <section className="max-w-7xl mx-auto px-6 md:px-12 mb-32">
       <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
         <div className="text-left">
-          <h2 className="text-5xl md:text-6xl mb-4">Sígueme en Instagram</h2>
-          <p className="text-black-art/60 font-body text-lg"> Para estar al día de las últimas novedades.</p>
+          <h2 className="text-5xl md:text-6xl mb-4">Sígueme</h2>
+          <p className="text-black-art/60 font-body text-lg"> En Instagram para estar al día de las últimas novedades.</p>
         </div>
         <a 
           href="https://instagram.com/paudecercaart" 
