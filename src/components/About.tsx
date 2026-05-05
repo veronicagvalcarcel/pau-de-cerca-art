@@ -13,7 +13,7 @@ export const About = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-6xl italic mb-12"
         >
-          "El arte de lo cercano y lo cotidiano."
+          ·Pau de cerca ·art·
         </motion.h2>
 
         {/* Description */}
@@ -24,7 +24,7 @@ export const About = () => {
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl leading-relaxed opacity-80 mb-16"
         >
-          Cada pieza es una exploración de la sencillez. Pau de cerca nace de la necesidad de llevar el arte fuera de los marcos y volcarlo en objetos que habitan nuestro día a día. Ilustraciones hechas a mano, producidas con mimo y consciencia.
+          Es un proyecto autogestionado y autodidacta que surge de la curiosidad por las artes manuales y artesanales. Detrás estoy yo, Pau, la persona que da forma a cada diseño y a cada pieza. Me gusta crear, sea cual sea el resultado, disfrutando y aprendiendo del proceso, y explorar desde una mirada social y disidente. Este proyecto es más que un proyecto… es una forma de expresión y de búsqueda.
         </motion.p>
 
         {/* Icons */}
@@ -32,7 +32,7 @@ export const About = () => {
           <motion.div whileHover={{ scale: 1.2 }} className="text-black-art">
             <Brush size={32} />
           </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} className="text-lila">
+          <motion.div whileHover={{ scale: 1.2 }} className="text-black-art">
             <Leaf size={32} />
           </motion.div>
           <motion.div whileHover={{ scale: 1.2 }} className="text-black-art">
