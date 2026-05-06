@@ -76,7 +76,7 @@ export const ShowcasePage = ({
                 className={`px-8 py-2.5 rounded-full font-label font-semibold text-sm transition-all border ${
                   activeCategory === cat 
                     ? 'bg-lila border-lila text-black-art shadow-lg shadow-lila/20' 
-                    : 'bg-white-art/20 border-black-art/10 text-black-art hover:bg-white-art/40'
+                    : 'bg-yellow border-black-art text-black-art hover:bg-white-art/50'
                 }`}
               >
                 {cat}
