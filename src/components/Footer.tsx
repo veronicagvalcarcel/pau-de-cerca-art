@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Brush, Leaf, Heart, Instagram } from 'lucide-react';
+import { Brush, Leaf, Heart, Instagram, Github } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -46,6 +46,18 @@ export const Footer = () => {
             @paudecercaart
           </a>
         
+          <div className="flex flex-col md:flex-row md:items-center items-center gap-1 md:gap-2 text-xs md:text-base text-black-art/60">
+            <span>Página web creada por</span>
+            <a 
+              href="https://github.com/veronicagvalcarcel" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-black-art hover:opacity-60 transition-opacity font-label font-medium flex items-center gap-1"
+            >
+              Verónica Gelabert Valcárcel
+              <Github size={16} className="md:w-[18px] md:h-[18px]" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
