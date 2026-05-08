@@ -108,7 +108,7 @@ const camisetas: Product[] = [
   ),
   createCamiseta(
     5,
-    'Eat the rich (parte delantera)',
+    'Eat the rich',
     'Eat the rich',
     'Camiseta negra con estampado en lado izquierdo de cara de persona en colores rojo y morado y llamas de fuego en los ojos, con la frase "eat the rich" debajo en los mismos colores. Clica aquí o en la imagen para ver la parte trasera.',
     'c5.webp'
