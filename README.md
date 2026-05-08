@@ -113,7 +113,8 @@ Product data and images are sourced from `src/constants.ts`. To add new products
 
 Copyright © 2024 Pau de cerca art. All rights reserved.
 ---
-Art made with ❤️ by Pau
+Art made with ❤️ by Pau 
+
 Website made with love and code by Vero. https://github.com/veronicagvalcarcel 
 ## 📱 Contact 
 Email: veronicagelabert8@gmail.com 
