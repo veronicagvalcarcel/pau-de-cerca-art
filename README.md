@@ -1,5 +1,6 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://instagram.fvlc4-1.fna.fbcdn.net/v/t51.82787-19/589273816_18077337536219746_1077106689845668936_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fvlc4-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2gF0MgXMCWrwxA6dzQoO5-pJGy2m1o-rLHAr_vPECCCeSTOxXjp-Dir1yrG3se5-ONo&_nc_ohc=Hgh9ucZ4QmsQ7kNvwFI4iUc&_nc_gid=LgtsZRTtG-ShNjHYOTjItg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af53tstU45h9Cz5LSno173ZaGndqQtAdIe1EhJ2o-rlJ4w&oe=6A0105CE&_nc_sid=8b3546" />
+<img alt="GHBanner" src="https://instagram.fvlc4-1.fna.fbcdn.net/v/t51.82787-19/589273816_18077337536219746_1077106689845668936_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fvlc4-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2gF0MgXMCWrwxA6dzQoO5-pJGy2m1o-rLHAr_vPECCCeSTOxXjp-Dir1yrG3se5-ONo&_nc_ohc=Hgh9ucZ4QmsQ7kNvwFI4iUc&_nc_gid=LgtsZRTtG-ShNjHYOTjItg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af53tstU45h9Cz5LSno173ZaGndqQtAdIe1EhJ2o-rlJ4w&oe=6A0105CE&_nc_sid=8b3546"
+style="max-width: 900px; width: 100%; height: auto;" />
 </div>
 
 # Pau de cerca art
